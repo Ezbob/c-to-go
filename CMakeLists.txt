@@ -20,9 +20,9 @@ find_package(Threads)
 
 add_executable(main ${SOURCES})
 target_include_directories(main PRIVATE
-  "${CMAKE_SOURCE_DIR}/libs/libdill/include"
+  "${CMAKE_SOURCE_DIR}/libs/include"
 ) 
 target_link_libraries(main PRIVATE
-  "${CMAKE_SOURCE_DIR}/libs/libdill/lib/libdill.a"
+  "${CMAKE_SOURCE_DIR}/libs/lib/libdill.a"
   "${CMAKE_THREAD_LIBS_INIT}"
 )

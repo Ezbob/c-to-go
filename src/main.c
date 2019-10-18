@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "libdill.h"
+#include "libdill/libdill.h"
 
 
 coroutine void worker(const char *text) {
