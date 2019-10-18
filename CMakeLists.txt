@@ -12,7 +12,14 @@ set(SOURCES
     src/main.c
 )
 
+
 # Also look for Find-cmake modules here
 #set(CMAKE_MODULE_PATH  ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/sdl2")
 
 add_executable(main ${SOURCES})
+target_include_directories(main PRIVATE
+  "${CMAKE_SOURCE_DIR}/libs/libdill/include"
+) 
+target_link_libraries(main PRIVATE
+  "${CMAKE_SOURCE_DIR}/libs/libdill/lib/libdill.a"
+)
