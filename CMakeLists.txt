@@ -8,21 +8,27 @@ project("checkers"
 
 set(CMAKE_C_STANDARD 11)
 
-set(SOURCES
-    src/main.c
+set(SERVER_SOURCES
+    src/server.c
 )
 
+set(SERVER
+  "server"
+)
 
 # Also look for Find-cmake modules here
 #set(CMAKE_MODULE_PATH  ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/sdl2")
 
 find_package(Threads)
 
-add_executable(main ${SOURCES})
-target_include_directories(main PRIVATE
+include_directories(
   "${CMAKE_SOURCE_DIR}/libs/include"
 ) 
-target_link_libraries(main PRIVATE
+
+link_libraries(
   "${CMAKE_SOURCE_DIR}/libs/lib/libdill.a"
   "${CMAKE_THREAD_LIBS_INIT}"
 )
+
+add_executable(${SERVER} ${SERVER_SOURCES})
+
