@@ -8,7 +8,7 @@
 
 
 coroutine void dialogue(int sock) {
-  char inbuf[512], outbuf[512] = "OK";
+  char inbuf[512], outbuf[512] = "OK\0";
 
   ssize_t receivedsize = mrecv(sock, inbuf, sizeof(inbuf), -1);
   if (receivedsize < 0) goto cleanup;
