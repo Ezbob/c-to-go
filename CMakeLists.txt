@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.12)
 
-project("checkers"
+project("ctogo"
     VERSION 0.1
     DESCRIPTION "libdill example"
     LANGUAGES C
