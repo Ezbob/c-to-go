@@ -7,4 +7,8 @@ This project is unfortunately *Nix (Linux, probably MacOS too) only.
 This project use the following tools to build itself:
  
   - `GnuMakefile` (or just `make`)
-  - `CMake` (version 3.0+ should do it)
+  - `CMake` (version 3.12+ should do it)
+
+### How-to
+The build system creates a server executable from the source file called `server`.
+This can be run to create an server instance. Once this is running, networking tools such as `telnet` can be used to communicate with the server.
